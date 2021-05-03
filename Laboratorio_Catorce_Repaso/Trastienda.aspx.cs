@@ -16,8 +16,8 @@ namespace Laboratorio_Catorce_Repaso
         protected void Page_Load(object sender, EventArgs e)
         {
             MaintainScrollPositionOnPostBack = true;
-            if (!IsPostBack) 
-            {
+           if (!IsPostBack) 
+           {
                 string archivo = Server.MapPath("Producto.json");
                 StreamReader jsonStream = File.OpenText(archivo);
                 string json = jsonStream.ReadToEnd();
@@ -28,7 +28,7 @@ namespace Laboratorio_Catorce_Repaso
                     GridView1.DataSource = vector_producto;
                     GridView1.DataBind();
                 }
-            }
+           }
 
         }
 
@@ -40,7 +40,7 @@ namespace Laboratorio_Catorce_Repaso
         }
         public void agregar_producto_nuevo() 
         {
-            if (vector_producto.Count == 0)
+            if (vector_producto.Count == 0 | vector_producto.Count >=1)
             {
                 Trastienda_Producto_clase nuevo_producto = new Trastienda_Producto_clase();
                 nuevo_producto.Codigo_producto = TextBox1.Text;
@@ -51,13 +51,19 @@ namespace Laboratorio_Catorce_Repaso
 
                 vector_producto.Add(nuevo_producto);
             }
-            if (GridView1.SelectedIndex >= 1)
+            if (GridView1.SelectedIndex >= 0)
             {
                 // al ingresar un producto existente
                 int existente = GridView1.SelectedIndex;
                 vector_producto[existente].Cantidad_ingreso =Convert.ToInt32(TextBox3.Text);
+
             }
+            GridView1.DataSource = vector_producto;
+            GridView1.DataBind();
             Guardar();
+            ButtonAgregar_P.Text = "Agregar producto";
+            TextBox3.Text = "";
+            Label1.Text = "";
         }
         protected void ButtonAgregar_P_Click(object sender, EventArgs e)
         {
