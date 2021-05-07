@@ -1,1 +1,1 @@
-[{"Codigo_producto":"codigo1","Nombre_producto":"nombre1","Cantidad_ingreso":0,"Precio_compra":10.0,"Precio_venta":15.0},{"Codigo_producto":"codigo2","Nombre_producto":"curso2","Cantidad_ingreso":5,"Precio_compra":10.0,"Precio_venta":15.0}]
+[{"Codigo_producto":"1111","Nombre_producto":"Leche","Cantidad_ingreso":5,"Precio_compra":10.0,"Precio_venta":15.0,"Imagen":"~/Imagenes/leche pediasure.jpg"},{"Codigo_producto":"2222","Nombre_producto":"Suero","Cantidad_ingreso":5,"Precio_compra":10.0,"Precio_venta":15.0,"Imagen":"~/Imagenes/Pedialyte.jpg"}]

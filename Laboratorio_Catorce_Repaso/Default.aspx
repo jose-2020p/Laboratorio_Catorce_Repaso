@@ -8,6 +8,12 @@
         a<br />
     </p>
     <p>
+        Nit cliente</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
     </p>
 
 </asp:Content>

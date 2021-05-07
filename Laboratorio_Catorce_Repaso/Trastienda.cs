@@ -11,7 +11,7 @@ namespace Laboratorio_Catorce_Repaso
     }
     public class Tienda_Online_Venta
     {
-}
+    }
     public class Trastienda_Producto_clase
     {
         string codigo_producto;
@@ -19,11 +19,13 @@ namespace Laboratorio_Catorce_Repaso
         int cantidad_ingreso;
         double precio_compra;
         double precio_venta;
+        string imagen;
 
         public string Codigo_producto { get => codigo_producto; set => codigo_producto = value; }
         public string Nombre_producto { get => nombre_producto; set => nombre_producto = value; }
         public int Cantidad_ingreso { get => cantidad_ingreso; set => cantidad_ingreso = value; }
         public double Precio_compra { get => precio_compra; set => precio_compra = value; }
         public double Precio_venta { get => precio_venta; set => precio_venta = value; }
+        public string Imagen { get => imagen; set => imagen = value; }
     }
 }

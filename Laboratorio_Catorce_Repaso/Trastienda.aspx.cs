@@ -49,6 +49,17 @@ namespace Laboratorio_Catorce_Repaso
                 nuevo_producto.Precio_compra = Convert.ToDouble(TextBox4.Text);
                 nuevo_producto.Precio_venta = Convert.ToDouble(TextBox5.Text);
 
+                string ruta_imagen = Path.GetFileName(FileUpload1.FileName);
+                try 
+                {
+                    FileUpload1.SaveAs(Server.MapPath("~/Imagenes/") + ruta_imagen);
+                }
+                catch (Exception ex)
+                {
+                    Label2.Text = "Se genero el siguiente error: " + ex.Message;
+                }
+                string archivo = "~/Imagenes/" + FileUpload1.FileName;
+                nuevo_producto.Imagen = archivo;
                 vector_producto.Add(nuevo_producto);
             }
             if (GridView1.SelectedIndex >= 0)
